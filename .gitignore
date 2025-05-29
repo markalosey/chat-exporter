@@ -1,0 +1,78 @@
+# Copied database files - often very large
+data/globalStorage/state.vscdb
+# Potentially ignore all .vscdb files in data/ if they are all large copies
+# data/*/state.vscdb 
+
+# Python virtual environment
+.venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+
+# PyInstaller
+# Usually these files are in a specfile directory next to the specfile.
+# Otherwise specify the format specdirectory/filename
+*.manifest
+*.spec
+
+#单元测试 / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code specific
+.vscode/ # Depending on your team's policy, you might commit some .vscode settings
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# Personal config (if any)
+.env
+
+# IDE / Editor specific
+*.idea/
+*.DS_Store
+
+# Output files from this project
+chat_exports/
+*.json # Be more specific if some JSON files should be tracked
+# session_summary_*.md # If you want to ignore these generated summaries
+
+# Copied local database files - exclude all content in data/
+data/
+data_backup/
+*.sqlite3
+*.vscdb
+aiservice_generations_full.json
+aiservice_prompts_full.json
+aiservice_generations_live.json
+aiservice_prompts_live.json
+composer_data_full.json
+composer_pane_91f7_content.json
+session_summary_*.md
+
+# Specific large log/notes files
+src/sychronicity.md/
+
+output

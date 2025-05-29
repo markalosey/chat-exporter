@@ -1,0 +1,11 @@
+default_vscdb_dir_paths:
+  Windows: "%APPDATA%/Cursor/User/workspaceStorage"
+  Darwin: "~/Library/Application Support/Cursor/User/workspaceStorage"
+  Linux: "~/.config/Cursor/User/workspaceStorage"
+# Default query to fetch AI chat data from the ItemTable.
+# This key will be used to get the list of all chat sessions (composer metadata).
+aichat_query_key: "composer.composerData"
+# The following SQL query is not directly used if aichat_query_key is processed first,
+# but kept for reference or potential direct use.
+# It was the old method, targeting a key that seems deprecated.
+aichat_sql_query: "SELECT value FROM ItemTable WHERE [key] IN ('workbench.panel.aichat.view.aichat.chatdata');"
