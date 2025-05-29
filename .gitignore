@@ -9,9 +9,27 @@ data/globalStorage/state.vscdb
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-*.pyc
-*.pyo
-*.pyd
+# *.pyc, *.pyo, *.pyd are covered by *.py[cod]
+
+# Local data, logs, and other non-shippable files
+local_files/
+
+# Copied local database files - exclude all content in data/
+# These are for raw DB copies, separate from general local_files/
+data/
+data_backup/
+*.sqlite3
+*.vscdb
+aiservice_generations_full.json
+aiservice_prompts_full.json
+aiservice_generations_live.json
+aiservice_prompts_live.json
+composer_data_full.json
+composer_pane_91f7_content.json
+session_summary_*.md
+
+# Environment variables file
+.env
 
 # Distribution / packaging
 .Python
@@ -47,32 +65,17 @@ htmlcov/
 *.swo
 *~
 
-# Personal config (if any)
-.env
-
 # IDE / Editor specific
 *.idea/
 *.DS_Store
 
 # Output files from this project
 chat_exports/
-*.json # Be more specific if some JSON files should be tracked
-# session_summary_*.md # If you want to ignore these generated summaries
+# Note: General *.json is not ignored by default.
+# Specific JSON files that were data dumps are now in local_files/
 
-# Copied local database files - exclude all content in data/
-data/
-data_backup/
-*.sqlite3
-*.vscdb
-aiservice_generations_full.json
-aiservice_prompts_full.json
-aiservice_generations_live.json
-aiservice_prompts_live.json
-composer_data_full.json
-composer_pane_91f7_content.json
-session_summary_*.md
+# Project output directory
+output/
 
 # Specific large log/notes files
 src/sychronicity.md/
-
-output
